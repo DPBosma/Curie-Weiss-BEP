@@ -1,13 +1,13 @@
-# Amount of sample groups and number of points to plot.
+# Amount of sample groups and number of data points in plot.
 numberOfSteps =21
 # Defining length of system in Ising model.
 d=round(Int,linspace(15, 15, numberOfSteps))
 # Value for the arbitrary parameter, psy.
-psy = linspace(0, 0, numberOfSteps)
-# Amount of markov steps in IsingModelAdvanced.
+psy = linspace(0,2, numberOfSteps)
+# Amount of Glauber steps in IsingModelAdvanced.
 markovit=round(Int,linspace( 200, 200, numberOfSteps))
 # Amount of data to construct empirical expectation.
-n=round(Int,linspace( 10,210, numberOfSteps))
+n=round(Int,linspace( 1000,1000, numberOfSteps))
 # Amount of iterations for convergence.
 convit = 1
 # Amount of data in each sample group.
@@ -15,9 +15,9 @@ varit = 30
 # Maximum value for d when calculating exact distribution.
 tol = 10
 # Real temperature.
-beta_star = 1
+beta_star = 1.1
 # Obervation with NumberOfNegative negative numbers based on 'd'.
-NumberOfNegative = 5
+NumberOfNegative = 3
 obs = CreateObs(d[1], NumberOfNegative)
 # Calculate new obs in model yes/no
 calnew = 0

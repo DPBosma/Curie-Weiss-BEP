@@ -30,7 +30,7 @@ function PlotVarExplanatoryMarkov(calnew, numberOfSteps, d, psy, markovit, n, co
       HobsVec = zeros(varit)
       for i in 1:varit
         # Create observation corresponding to beta_star, save energy of the observation to (2).
-        obs = IsingModelAdvanced(d[k], beta_star, markovit[k])
+        obs = IsingModelAdvanced(d[k], beta_star, 200)
         HobsVec[i] = EnergyAdvanced(obs)
       end
 
